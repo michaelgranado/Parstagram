@@ -2,22 +2,29 @@
 
 **Parstagram** is a photo sharing app similar to Instagram but using Parse as its backend.
 
-Time spent: **8** hours spent in total
+Time spent: **7** hours spent in total
 
 ## User Stories
 
 The following **required** functionality is completed:
 
-- [X] User can sign up to create a new account using Parse authentication.
-- [X] User can log in and log out of his or her account.
-- [X] The current signed in user is persisted across app restarts.
-- [X] User can take a photo, add a caption, and post it to "Instagram".
+- [X] User can view the last 20 posts submitted to "Instagram".
+- [X] The user should switch between different tabs - viewing all posts (feed view), compose (capture photos form camera) and profile tabs (posts made) using fragments and a Bottom Navigation View. (2 points)
+- [X] User can pull to refresh the last 20 posts submitted to "Instagram".
 
 The following **optional** features are implemented:
 
-- [ ] User sees app icon in home screen and styled bottom navigation view
+- [X] User sees app icon in home screen and styled bottom navigation view
 - [ ] Style the feed to look like the real Instagram feed.
-- [ ] After the user submits a new post, show an indeterminate progress bar while the post is being uploaded to Parse.
+- [ ] User can load more posts once he or she reaches the bottom of the feed using infinite scrolling.
+- [ ] Show the username and creation time for each post.
+- [ ] User can tap a post to view post details, including timestamp and caption.
+- [ ] User Profiles
+      - [ ] Allow the logged in user to add a profile photo
+      - [ ] Display the profile photo with each post
+      - [ ] Tapping on a post's username or profile photo goes to that user's profile page and shows a grid view of the user's posts 
+- [ ] User can comment on a post and see all comments for each post in the post details screen.
+- [ ] User can like a post and see number of likes for each post in the post details screen.
 
 The following **additional** features are implemented:
 
@@ -27,15 +34,15 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='https://i.imgur.com/Ae3qzp0.gif' title='Parstagram Walkthrough' width='' alt='Parstagram Walkthrough' />
+<img src='https://i.imgur.com/cjK153X.gif' title='Parstagram Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-The most notable challenge was actually configuring Parse to the app. For some reason, my android studio did not confirgure my default gradle settings properly so 
-I had trouble actually importing the required dependencies. To fix this, I had to delete most of the abnormalities within my gradle.settings file so that I could 
-properly import Parse as a dependency.
+The most notable challenge was implementing the fragment views. It was diffcult moving all of my methods from the Main Activity into the 
+fragments without having compilation errors. Additionally, it was difficult formatting the app because there were many different layouts with 
+different items.
 
 ## Open-source libraries used
 
@@ -44,7 +51,7 @@ properly import Parse as a dependency.
 
 ## License
 
-    Copyright [2021] [Michael Granado]
+    Copyright [2021] [Michael]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
